@@ -13,10 +13,12 @@ flickr = new Flickr(keys);
 server.use(express.static(__dirname+'/public'));
 //Setup logging
 server.use(logger);
+
 //get for home page
 server.get('/', function(req, res) {
   res.sendFile('public/html/index.html', {root: __dirname});
 });
+
 
 //get for test search
 flickr.get('photos.search',{'tags':'cats,dogs'}, function(err, result){
