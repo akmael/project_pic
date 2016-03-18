@@ -1,13 +1,14 @@
 var express = require('express'),
     logger = require('morgan')('dev'),
     Flickr = require('node-flickr'),
+    apiKeys  =  require('./config/config.js'),
     server = express();
+//exports
 
-//  api key
-var keys =   {
-  'api_key':'afeb9fc2b2a31db028e4cb0705323576'
-};
-flickr = new Flickr(keys);
+
+
+flickr = new Flickr(apiKeys);
+
 
 //Static assets such as HTML, JavaScript, CSS
 server.use(express.static(__dirname+'/public'));
