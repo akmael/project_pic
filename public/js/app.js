@@ -14,6 +14,7 @@ function picController($scope, $http){
 
 // search button functionaility
 $scope.searchTags = function(){
+  
 
 }
 
