@@ -1,6 +1,4 @@
-angular.module('picApp', [
-
-]);
+angular.module('picApp', []);
 
 angular.module('picApp')
        .controller('picController', picController);
@@ -11,7 +9,13 @@ picController.$inject = ['$scope', '$http'];
 function picController($scope, $http){
 
 
-// search button functionaility
+
+ //array hold photos
+ $scope.photos= [];
+ console.log(photos);
+
+
+// search button functionality
 $scope.searchTags = function(){
  console.log('button pressed');
   var searchTerms = $scope.search;
