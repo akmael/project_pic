@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
-		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/main.css">
 
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -51,7 +51,9 @@
               <h3 class='masthead-brand'>
                 Title
               </h3>
-
+              <ul ng-repeat='photos in photo'>
+                <li> {{ $scope.photos }} </li>
+              </ul>
         </div>
       </div>
     </div>
