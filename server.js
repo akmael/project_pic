@@ -23,6 +23,7 @@ server.get('/', function(req, res) {
 //get for the goat
 server.get('/cover', function(req, res) {
   res.sendFile('public/html/cover.html', {root: __dirname});
+});
 
 //get for test search
 flickr.get('photos.search',{'tags':'cats,dogs'}, function(err, result){
