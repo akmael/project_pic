@@ -1,4 +1,5 @@
 var express = require('express'),
+    bodyParser= require('body-parser'),
     logger = require('morgan')('dev'),
     Flickr = require('node-flickr'),
     apiKeys  =  require('./config/config.js'),
@@ -12,6 +13,10 @@ flickr = new Flickr(apiKeys);
 
 //Static assets such as HTML, JavaScript, CSS
 server.use(express.static(__dirname+'/public'));
+//middleware
+server.use( bodyParser.json());
+server.use(bodyParser.urlencoded({extended: true}));
+
 //Setup logging
 server.use(logger);
 
@@ -20,11 +25,19 @@ server.get('/', function(req, res) {
   res.sendFile('public/html/index.html', {root: __dirname});
 });
 
+//get for the goat
+server.get('/cover', function(req, res) {
+  res.sendFile('public/html/cover.html', {root: __dirname});
+});
 
 //get for test search
-flickr.get('photos.search',{'tags':'cats,dogs'}, function(err, result){
-    if (err) return console.error(err);
-    console.log(result.photos);
+
+server.post('/api/photos', function(req, res){
+
+   flickr.get('photos.getRecent', req.body.terms , function(err, result){
+      if (err) return console.error(err);
+      res.json(result);
+   });
 
 });
 
