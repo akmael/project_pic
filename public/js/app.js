@@ -8,21 +8,18 @@ picController.$inject = ['$scope', '$http'];
 
 function picController($scope, $http){
 
-
-
- //array hold photos
- $scope.photos= [];
- console.log(photos);
-
+$scope.photos= [];
 
 // search button functionality
 $scope.searchTags = function(){
  console.log('button pressed');
   var searchTerms = $scope.search;
-  $http.post('/api/photos')
+  $http.post('/api/photos', $scope.search )
        .then(function(response){
          console.log("i got here")
-         console.log(response);
+         $scope.photos = response.data.photos;
+         $scope.photos = response.data.photos.photo;
+         console.log($scope.photos)
 
        })
        .catch(function (err){

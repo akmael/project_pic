@@ -166,3 +166,8 @@ body {
     width: 700px;
   }
 }
+
+/*overrides */
+#search{
+  color: #000;
+}
