@@ -30,11 +30,11 @@ server.get('/cover', function(req, res) {
   res.sendFile('public/html/cover.html', {root: __dirname});
 });
 
-//get for test search
+//post for search
 
 server.post('/api/photos', function(req, res){
-
-   flickr.get('photos.getRecent', req.body.terms , function(err, result){
+    console.log(req.body )
+   flickr.get('photos.search',{"tags": req.body.terms}, function(err, result){
       if (err) return console.error(err);
       res.json(result);
    });
