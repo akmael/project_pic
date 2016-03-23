@@ -16,8 +16,7 @@ $scope.searchTags = function(){
   var searchTerms = $scope.search;
   $http.post('/api/photos', $scope.search )
        .then(function(response){
-         console.log("i got here")
-         $scope.photos = response.data.photos;
+         console.log("searching for photos now ");
          $scope.photos = response.data.photos.photo;
          console.log($scope.photos)
 
@@ -26,6 +25,19 @@ $scope.searchTags = function(){
          console.error(err);
        })
 
+
+}
+//request for search by click of image
+$scope.cameraInfo = function(photoid){
+  console.log(photoid);
+  $http.post('api/photos/camera/'+photoid)
+        .then(function(response){
+          console.log("retriving info");
+          $scope.info = response.data.photo.camera;
+          console.log(response);
+
+
+        })
 
 }
 
