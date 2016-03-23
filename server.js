@@ -30,15 +30,28 @@ server.get('/cover', function(req, res) {
   res.sendFile('public/html/cover.html', {root: __dirname});
 });
 
-//post for search
+//http post for search by tags
 
 server.post('/api/photos', function(req, res){
     console.log(req.body )
+
    flickr.get('photos.search',{"tags": req.body.terms}, function(err, result){
       if (err) return console.error(err);
       res.json(result);
    });
 
+});
+
+//http post for serch on image click for image info
+
+server.post('/api/photos/camera/:id', function(req, res){
+     console.log(req.params.id);
+  flickr.get('photos.getExif',{"photo_id" : req.params.id}, function(err, result){
+        if (err) return console.error(err);
+        console.log(result);
+        res.json(result);
+
+  });
 });
 
 server.listen(8080, function() {
