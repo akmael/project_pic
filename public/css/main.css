@@ -4,11 +4,58 @@
    background: -o-linear-gradient(tan, transparent);
    background: -moz-linear-gradient(tan, transparent);
    background: linear-gradient(tan, transparent);
-  color: #492602;
+
 }
 
-#active{
-  background-color: #966331;
+.social{
+  margin: 10px;
+  color:#492602;
+}
+
+a{
+  color:#492602;
+}
+
+a:hover{
+  color:#a86a3b;
+
+}
+
+.navbar-brand{
   color: #492602;
+}
+.navbar-brand:hover{
+  color:#492602;
+
+}
+
+.active{
+  background-color: #966331;
+}
+
+.inner{
+  color:#492602;
+
+}
+
+.title{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.infield{
+  text-align: center;
+  position: relative;
+  color: #966331;
+
+}
+
+p{
+  color: #966331;
+}
+
+.test{
+  height: 150px;
+  width:200px;
 
 }
