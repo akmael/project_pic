@@ -1,4 +1,4 @@
-angular.module('picApp', []);
+angular.module('picApp', ['ngAnimate']);
 
 angular.module('picApp')
        .controller('picController', picController);

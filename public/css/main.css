@@ -171,3 +171,12 @@ body {
 #search{
   color: #000;
 }
+
+
+div.ng-enter{
+    animation:slideInUp 2s;
+}
+
+div.ng-leave{
+    animation: bounceOut 1s;
+}
