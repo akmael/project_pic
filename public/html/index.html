@@ -63,10 +63,15 @@
           </div>
 
 
-         <!--display  area for photos from-->
+         <!--display  area for photos from flikr -->
+         <div>{{info}}</div>
         <div ng-repeat="photo in photos">
+
           <img class="imgsize pull-right" ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_n.jpg" alt='{{photo.title}}'>
+
         </div>
+
+
 
 
         <div class="mastfoot">
