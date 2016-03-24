@@ -54,8 +54,8 @@ p{
   color: #966331;
 }
 
-.test{
-  height: 150px;
-  width:200px;
-
+.imgsize{
+  height: 160px;
+  width:220px;
+  margin:10px;
 }
