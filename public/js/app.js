@@ -1,4 +1,4 @@
-angular.module('picApp', []);
+angular.module('picApp', ['angular-loading-bar']);
 
 angular.module('picApp')
        .controller('picController', picController);
