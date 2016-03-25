@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootbox/4.4.0/bootbox.js">
     <link rel="stylesheet" href="css/animate.min.css">
 		<link rel="stylesheet" href="css/main.css">
 
@@ -66,7 +67,7 @@
 
 
          <!--display  area for photos from flikr -->
-         
+
         <div ng-repeat="photo in photos">
 
           <img class="imgsize pull-right" ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_n.jpg" alt='{{photo.title}}'>
