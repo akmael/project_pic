@@ -1,4 +1,6 @@
-angular.module('picApp', ['ngAnimate']);
+
+angular.module('picApp', ['angular-loading-bar', 'ngAnimate']);
+
 
 angular.module('picApp')
        .controller('picController', picController);
