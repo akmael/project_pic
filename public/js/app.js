@@ -30,16 +30,18 @@ $scope.searchTags = function(){
 
 }
 //request for search by click of image
-$scope.cameraInfo = function(photoid){
-  console.log(photoid);
-  $http.post('api/photos/camera/'+photoid)
+$scope.cameraInfo = function(photo){
+  bootbox.dialog({
+    message: "photo here ",
+    title: photo.title
+  });
+  $http.post('api/photos/camera/'+photo.id)
         .then(function(response){
           console.log("retriving info");
           $scope.info = response.data.photo.camera;
           console.log(response);
+        });
 
-
-        })
 
 }
 
