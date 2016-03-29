@@ -31,9 +31,16 @@ $scope.searchTags = function(){
 }
 //request for search by click of image
 $scope.cameraInfo = function(photo){
+  var farm = photo.farm,
+     server= photo.server,
+     id = photo.id,
+     secret= photo.secret
+     title = photo.title;
+
   bootbox.dialog({
-    message: "photo here ",
-    title: photo.title
+    message: "<img class='imgsize pull-right' ng-src='http://farm"+farm+".static.flickr.com/"+server+"/"+id+"_"+secret+"_l.jpg' alt='"+title+"'>",
+    title: photo.title,
+    size: 'large'
   });
   $http.post('api/photos/camera/'+photo.id)
         .then(function(response){
