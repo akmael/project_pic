@@ -50,6 +50,10 @@ a:hover{
 
 }
 
+input[type=text]:focus{
+  border-color: #FAEBD7;
+}
+
 p{
   color: #966331;
 }
