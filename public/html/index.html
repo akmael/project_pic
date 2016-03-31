@@ -22,6 +22,15 @@
     <![endif]-->
   </head>
 
+  <style>
+  body{
+    background-image: url("images/pickPicPik.png");
+    background-size: 290px;
+    background-attachment: fixed;
+    background-position: left;
+  }
+  </style>
+
   <body ng-controller="picController">
 
     <!-- Fixed navbar -->
@@ -38,9 +47,9 @@
           </div>
           <div  class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class=" li active"><a href="/">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="cover">Goat</a></li>
+              <li class=" li active"><a href="/"><strong>Home</strong></a></li>
+              <li><a href="#about"><strong>About</strong></a></li>
+              <li><a href="cover"><strong>Goat</strong></a></li>
             </ul>
             <div class="social pull-right">
                <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -59,8 +68,8 @@
              for it is not to be reached by search or trail."</p><p> -Heraclitus-</p>
              </div>
           <div class="infield">
-          <input type="text" class="input" role="search" placeholder="Find Your Photos" ng-model="search.terms" >
-          <button id="button1" class="btn btn-default btn-md" ng-click="searchTags()">Search</button>
+          <input type="text" class="input" role="search" placeholder="Find Your Photos" ng-model="search.terms" style="border-color:#966331">
+          <button id="button1" class="btn btn-default btn-md" ng-click="searchTags()" style="border-color:#966331"><span class="glyphicon glyphicon-search" aria-hidden="true" style="color:tan"></span></button>
           </div>
 
           <div modal="showModal" close="cancel()">
