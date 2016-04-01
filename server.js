@@ -51,11 +51,21 @@ server.post('/api/photos/camera/:id', function(req, res){
      console.log(req.params.id);
   flickr.get('photos.getExif',{"photo_id" : req.params.id}, function(err, result){
         if (err) return console.error(err);
-        console.log(result);
         res.json(result);
 
   });
 });
+//http post for individual photo
+server.post('/api/photos/xinfo:id', function(req, res){
+
+
+   flickr.get('photos.getSizes',{"photo_id": req.params.id}, function(err, result){
+      if (err) return console.error(err);
+      res.json(result);
+   });
+
+});
+
 
 server.listen(8080, function() {
   console.log('Now listening on port 8080');

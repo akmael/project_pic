@@ -52,6 +52,10 @@ a:hover{
 
 }
 
+input[type=text]:focus{
+  border-color: #FAEBD7;
+}
+
 p{
   color: #966331;
 }
@@ -76,4 +80,33 @@ p{
 
 .img1:hover{
 
+}
+
+/*ng animate stuff (still not working )*/
+div.ng-enter{
+    animation: slideInUp 2s;
+}
+
+div.ng-leave{
+    animation: bounceOut 1s;
+}
+.modal.ng-enter{
+    animation: fadeIn 1s;
+}
+
+.modal-body{
+  background-color: #fff;
+  width: 700px;
+  margin: 0 auto;
+
+}
+.modal-header{
+  background-color: #fff;
+  width: 700px;
+  margin: 0 auto;
+}
+.modal-footer{
+  background-color: #fff;
+  width: 700px;
+  margin: 0 auto;
 }
