@@ -30,6 +30,9 @@ server.get('/cover', function(req, res) {
   res.sendFile('public/html/cover.html', {root: __dirname});
 });
 
+server.get('/about', function(req, res) {
+  res.sendFile('public/html/about.html', {root: __dirname});
+});
 //http post for search by tags
 
 server.post('/api/photos', function(req, res){
