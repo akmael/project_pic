@@ -6,7 +6,7 @@ var express = require('express'),
     server = express();
 //exports
 
-
+var port = process.env.port || 3000;
 
 flickr = new Flickr(apiKeys);
 
@@ -64,6 +64,6 @@ server.post('/api/photos/xinfo:id', function(req, res){
 });
 
 
-server.listen(8080, function() {
+server.listen(port, function() {
   console.log('Now listening on port 8080');
 });

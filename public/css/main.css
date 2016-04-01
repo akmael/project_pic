@@ -71,7 +71,7 @@ div.ng-enter{
 div.ng-leave{
     animation: bounceOut 1s;
 }
-.modal.ng-enter{
+.wholemodal.ng-enter{
     animation: fadeIn 1s;
 }
 
