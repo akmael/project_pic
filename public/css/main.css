@@ -4,8 +4,10 @@
    background: -o-linear-gradient(tan, transparent);
    background: -moz-linear-gradient(tan, transparent);
    background: linear-gradient(tan, transparent);
+   border:0px;
 
 }
+
 
 .social{
   margin: 10px;
@@ -63,6 +65,23 @@ p{
   width:220px;
   margin:10px;
 }
+
+.portraits{
+  position:relative;
+ width:100%
+}
+
+.img1{
+  height: auto;
+  width:50%;
+  margin-top: 100px;
+  margin-left: 20%;
+}
+
+.img1:hover{
+
+}
+
 /*ng animate stuff (still not working )*/
 div.ng-enter{
     animation: slideInUp 2s;
